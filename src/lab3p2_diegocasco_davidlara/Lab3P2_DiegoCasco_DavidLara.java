@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 import static lab3p2_diegocasco_davidlara.Alumnos.*;
+import static lab3p2_diegocasco_davidlara.Rutas.*;
 
 /**
  *
@@ -22,7 +23,6 @@ public class Lab3P2_DiegoCasco_DavidLara {
     public static void main(String[] args) {
         // TODO code application logic here
         ArrayList transportistas = new ArrayList();
-        Transporte t= new Transporte();
         int opcion=100;
         while(opcion !=0){
             opcion = Integer.parseInt(
@@ -45,7 +45,10 @@ public class Lab3P2_DiegoCasco_DavidLara {
                 String code=JOptionPane.showInputDialog("Ingrese el código del libro: ");
                 registrarC(name, code);
             }if(opcion==2){
-
+                String name=JOptionPane.showInputDialog("Ingrese el nombre de la ruta: ");
+                int code= Integer.parseInt(JOptionPane.showInputDialog("Ingrese la coordenada X de la ruta: "));
+                int code2= Integer.parseInt(JOptionPane.showInputDialog("Ingrese la coordenada Y de la ruta: "));
+                registrarR(name, code, code2);
             }if(opcion==3){
                 String name=JOptionPane.showInputDialog("Ingrese el nombre del alumno: ");
                 String Idt=JOptionPane.showInputDialog("Ingrese la identidad del alumno: ");
@@ -59,9 +62,9 @@ public class Lab3P2_DiegoCasco_DavidLara {
             }if(opcion ==5){
                 int exp=Integer.parseInt(
                         JOptionPane.showInputDialog("Ingrese los anos de experiencia: "));
-                transportistas.add(new Transportistas(exp,transportistas));
+                transportistas.add(new Transportistas(exp, transportistas));
                 String nom=JOptionPane.showInputDialog("Ingrese el Apodo: ");
-                transportistas.add(new Transportistas(exp,transportistas));
+                transportistas.add(new Transportistas(exp, transportistas));
             }if(opcion==6){
                 
             }if(opcion ==7){
@@ -74,23 +77,7 @@ public class Lab3P2_DiegoCasco_DavidLara {
             }if(opcion==8){
                 imprimirClases();
             }if(opcion==9){
-                String tipo=JOptionPane.showInputDialog("Ingrese el tipo de transporte: ");
-                t.setTipotransporte(tipo);
-                if(tipo=="Bus"||tipo=="Rapidito"){
-                    int num=Integer.parseInt(
-                        JOptionPane.showInputDialog("Ingrese el numero de asientos: "));
-                    t.setAsientos(num);
-                     int par=Integer.parseInt(
-                        JOptionPane.showInputDialog("Ingrese el numero de parados: "));
-                    t.setParados(par);
-                }if(tipo=="taxis"){
-                    t.setAsientos(4);
-                    int num=Integer.parseInt(
-                        JOptionPane.showInputDialog("Ingrese el numero de placa: "));
-                    t.setPlaca(num);
-                }else if(tipo=="mototaxis"){
-                    t.setAsientos(2);
-                }
+                mostrarRutas();
             }if (opcion==10){
                 imprimirAlumnos();
             }if(opcion==11){
