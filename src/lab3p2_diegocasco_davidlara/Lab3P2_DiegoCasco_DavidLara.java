@@ -5,6 +5,7 @@
  */
 package lab3p2_diegocasco_davidlara;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,7 +19,8 @@ public class Lab3P2_DiegoCasco_DavidLara {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int opcion=0;
+        ArrayList transportistas = new ArrayList();
+        int opcion=100;
         while(opcion !=0){
             opcion = Integer.parseInt(
             JOptionPane.showInputDialog(
@@ -36,6 +38,36 @@ public class Lab3P2_DiegoCasco_DavidLara {
                     + "11-Listar Transportistas\n"
                     + "12-Listar Transportes"));
             if(opcion ==1){
+                
+            }if(opcion==2){
+                
+            }if(opcion==3){
+                
+            }if(opcion==4){
+                
+            }if(opcion ==5){
+                int exp=Integer.parseInt(
+                        JOptionPane.showInputDialog("Ingrese los anos de experiencia: "));
+                String nom=JOptionPane.showInputDialog("Ingrese el Apodo: ");
+                transportistas.add(new Transportistas(exp, transportistas));
+            }if(opcion==6){
+                
+            }if(opcion ==7){
+                int opcionsim=0;
+                while(opcionsim!=0){
+                    opcionsim =Integer.parseInt(JOptionPane.showInputDialog(
+                    "0-Salir\n"
+                            + ""));
+                }
+            }if(opcion==8){
+                
+            }if(opcion==9){
+                
+            }if (opcion==10){
+                
+            }if(opcion==11){
+                
+            }if(opcion ==12){
                 
             }
         }
