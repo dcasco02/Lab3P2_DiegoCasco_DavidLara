@@ -48,6 +48,7 @@ public class Lab3P2_DiegoCasco_DavidLara {
             }if(opcion ==5){
                 int exp=Integer.parseInt(
                         JOptionPane.showInputDialog("Ingrese los anos de experiencia: "));
+                transportistas.add(new Transportistas(exp, transportistas));
                 String nom=JOptionPane.showInputDialog("Ingrese el Apodo: ");
                 transportistas.add(new Transportistas(exp, transportistas));
             }if(opcion==6){
@@ -66,7 +67,13 @@ public class Lab3P2_DiegoCasco_DavidLara {
             }if (opcion==10){
                 
             }if(opcion==11){
-                
+                String salida="";
+                for(Object temp: transportistas){
+                    if(temp instanceof Transportistas){
+                        salida=""+transportistas.indexOf(temp)+" -"+ temp+"\n";
+                    }
+                }
+                JOptionPane.showMessageDialog(null,salida);
             }if(opcion ==12){
                 
             }

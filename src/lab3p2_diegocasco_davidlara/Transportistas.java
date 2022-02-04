@@ -36,9 +36,5 @@ public class Transportistas {
         this.apodo = apodo;
     }
 
-    @Override
-    public String toString() {
-        return "Transportistas{" + "tiempoexp=" + tiempoexp + ", apodo=" + apodo + '}';
-    }
     
 }
