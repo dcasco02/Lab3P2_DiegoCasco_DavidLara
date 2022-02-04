@@ -60,11 +60,10 @@ public class Lab3P2_DiegoCasco_DavidLara {
                 String code=JOptionPane.showInputDialog("Ingrese el código de la clase: ");
                 agregarClaseA(Id, code);
             }if(opcion ==5){
+                String nom=JOptionPane.showInputDialog("Ingrese el Apodo: ");
                 int exp=Integer.parseInt(
                         JOptionPane.showInputDialog("Ingrese los anos de experiencia: "));
-                transportistas.add(new Transportistas(exp, transportistas));
-                String nom=JOptionPane.showInputDialog("Ingrese el Apodo: ");
-                transportistas.add(new Transportistas(exp, transportistas));
+                transportistas.add(new Transportistas(exp,nom));
             }if(opcion==6){
                 
             }if(opcion ==7){

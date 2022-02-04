@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Transportistas {
     private int tiempoexp;
-    private ArrayList<String> apodo;
+    private String apodo;
 
     public int getTiempoexp() {
         return tiempoexp;
@@ -23,17 +23,21 @@ public class Transportistas {
         this.tiempoexp = tiempoexp;
     }
 
-    public ArrayList<String> getApodo() {
+    public String getApodo() {
         return apodo;
     }
 
-    public void setApodo(ArrayList<String> apodo) {
+    public void setApodo(String apodo) {
         this.apodo = apodo;
     }
 
-    public Transportistas(int tiempoexp, ArrayList<String> apodo) {
+    public Transportistas(int tiempoexp,String apodo) {
         this.tiempoexp = tiempoexp;
         this.apodo = apodo;
+    }
+    @Override
+    public String toString() {
+        return  "tiempoexp=" + tiempoexp + ", apodo=" + apodo;
     }
 
     
