@@ -2,7 +2,7 @@ package lab3p2_diegocasco_davidlara;
 
 import java.util.ArrayList;
 
-public class Clases extends Verificador {
+public class Clases {
 
     // Atributos
     private static boolean verificador = false;
@@ -23,8 +23,12 @@ public class Clases extends Verificador {
     }
 
     public static void registrarC(String nombre, String codigo){
-        Clase clase = new Clase(nombre, codigo);
-        clases.add(clase);
+        if (!verificador) {
+            Clase clase = new Clase(nombre, codigo);
+            clases.add(clase);
+        } else {
+            System.out.println("Ya existe una clase con ese código");
+        }
     }
 
     public static void imprimirClases(){

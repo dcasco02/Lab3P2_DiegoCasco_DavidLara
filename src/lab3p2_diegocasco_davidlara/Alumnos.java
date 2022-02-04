@@ -21,7 +21,6 @@ public class Alumnos extends Clases{
         }
     }
 
-
     public static void agregarAlumno(String Id) {
         verify(Id);
         if (!verificar) {
@@ -35,8 +34,7 @@ public class Alumnos extends Clases{
     public static void imprimirAlumnos(){
         for (int i = 0; i < alumnos.size(); i++) {
             for (int j = 0; j < clases.size(); j++) {
-                System.out.println(alumnos.get(i).getId() + " " + clases.get(j).getNombre());
-
+                System.out.println(" Id Alumno: " + alumnos.get(i).getId() + " " + " Clases del alumno: " + clases.get(j).getNombre());
                 }
             }
     }
