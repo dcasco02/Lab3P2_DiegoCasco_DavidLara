@@ -46,5 +46,10 @@ public class Transporte {
     public void setPlaca(int placa) {
         this.placa = placa;
     }
+
+    @Override
+    public String toString() {
+        return "Transporte{" + "tipotransporte=" + tipotransporte + ", asientos=" + asientos + ", parados=" + parados + ", placa=" + placa + '}';
+    }
     
 }

@@ -88,7 +88,13 @@ public class Lab3P2_DiegoCasco_DavidLara {
                 }
                 JOptionPane.showMessageDialog(null,salida);
             }if(opcion ==12){
-                
+                String salida = "";
+                for (Object temp : transportistas) {
+                    if (temp instanceof Transporte) {
+                        salida = "" + transportistas.indexOf(temp) + " -" + temp + "\n";
+                    }
+                }
+                JOptionPane.showMessageDialog(null, salida);
             }
         }
     }
