@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 import static lab3p2_diegocasco_davidlara.Alumnos.*;
-import static lab3p2_diegocasco_davidlara.Clases.*;
 
 /**
  *
@@ -47,8 +46,11 @@ public class Lab3P2_DiegoCasco_DavidLara {
             }if(opcion==2){
 
             }if(opcion==3){
+                String name=JOptionPane.showInputDialog("Ingrese el nombre del alumno: ");
+                String Idt=JOptionPane.showInputDialog("Ingrese la identidad del alumno: ");
                 String Id=JOptionPane.showInputDialog("Ingrese el Id del alumno: ");
-                agregarAlumno(Id);
+                int fN= Integer.parseInt(JOptionPane.showInputDialog("Ingrese la fecha de nacimiento del alumno: "));
+                agregarAlumno(name, Idt, Id, fN);
             }if(opcion==4){
                 String Id=JOptionPane.showInputDialog("Ingrese el Id del alumno: ");
                 String code=JOptionPane.showInputDialog("Ingrese el código de la clase: ");

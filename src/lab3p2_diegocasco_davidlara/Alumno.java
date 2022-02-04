@@ -3,15 +3,25 @@ package lab3p2_diegocasco_davidlara;
 public class Alumno {
 
     // Atributos
+    private String nombre;
+    private String identidad;
     private String Id;
+    private int fechaNacimiento;
 
     // Constructor
-    public Alumno(String Id) {
+    public Alumno(String nombre,String identidad, String Id, int fechaNacimiento) {
         this.Id = Id;
+        this.nombre = nombre;
+        this.identidad = identidad;
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     public String getId() {
         return Id;
+    }
+
+    public String getIdentidad() {
+        return identidad;
     }
 
     public void setId(String Id) {

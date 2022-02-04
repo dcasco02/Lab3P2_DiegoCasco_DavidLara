@@ -10,9 +10,9 @@ public class Alumnos extends Clases{
 
     // Métodos
 
-    public static void verify(String Id) {
+    public static void verify(String Id, String identidad) {
         for (int i = 0; i < alumnos.size(); i++) {
-            if (alumnos.get(i).getId().equals(Id)) {
+            if (alumnos.get(i).getId().equals(Id) && alumnos.get(i).getIdentidad().equals(identidad)) {
                 System.out.println("El alumno ya está registrado");
                 verificar = true;
             } else {
@@ -21,10 +21,10 @@ public class Alumnos extends Clases{
         }
     }
 
-    public static void agregarAlumno(String Id) {
-        verify(Id);
+    public static void agregarAlumno(String nombre,String identidad, String Id, int fechaNacimiento){
+        verify(Id, identidad);
         if (!verificar) {
-            Alumno alumno = new Alumno(Id);
+            Alumno alumno = new Alumno(nombre, identidad, Id, fechaNacimiento);
             alumnos.add(alumno);
         } else {
             System.out.println("El alumno ya está registrado");
