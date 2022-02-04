@@ -31,6 +31,18 @@ public class Alumnos extends Clases{
         }
     }
 
+    public static void agregarClaseA(String Id, String nombre) {
+        for (int i = 0; i < alumnos.size(); i++) {
+            if (alumnos.get(i).getId().equals(Id)) {
+                for (int j = 0; j < clases.size(); j++) {
+                    if (clases.get(j).getNombre().equals(nombre)) {
+                        alumnos.get(i).setClase(clases.get(j));
+                    }
+                }
+            }
+        }
+    }
+
     public static void imprimirAlumnos(){
         for (int i = 0; i < alumnos.size(); i++) {
             for (int j = 0; j < clases.size(); j++) {

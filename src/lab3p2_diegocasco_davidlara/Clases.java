@@ -23,6 +23,7 @@ public class Clases {
     }
 
     public static void registrarC(String nombre, String codigo){
+        verify(codigo);
         if (!verificador) {
             Clase clase = new Clase(nombre, codigo);
             clases.add(clase);

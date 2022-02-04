@@ -20,8 +20,14 @@ public class Clase {
         return codigo;
     }
 
+    public void setAlumno(Alumno alumno) {
+        alumno.setClase(this);
+    }
+
     public String toString(){
         return "Clase: " + nombre + " - " + codigo;
     }
+
+
 }
 

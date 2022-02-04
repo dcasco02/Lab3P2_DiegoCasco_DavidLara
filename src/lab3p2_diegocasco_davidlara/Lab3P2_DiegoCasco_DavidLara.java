@@ -8,6 +8,9 @@ package lab3p2_diegocasco_davidlara;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
+import static lab3p2_diegocasco_davidlara.Alumnos.*;
+import static lab3p2_diegocasco_davidlara.Clases.*;
+
 /**
  *
  * @author dcasc
@@ -31,20 +34,25 @@ public class Lab3P2_DiegoCasco_DavidLara {
                     + "4-Agregar alumno a clase\n"
                     + "5-Crear Transportista\n"
                     + "6-Crear Transporte\n"
-                    + "7- Simulacion\n"
+                    + "7- Simulación\n"
                     + "8-Listar Clases\n"
                     + "9-Listar Rutas\n"
                     + "10-Listar Alumnos\n"
                     + "11-Listar Transportistas\n"
                     + "12-Listar Transportes"));
             if(opcion ==1){
-                
+                String name=JOptionPane.showInputDialog("Ingrese el nombre del libro: ");
+                String code=JOptionPane.showInputDialog("Ingrese el código del libro: ");
+                registrarC(name, code);
             }if(opcion==2){
-                
+
             }if(opcion==3){
-                
+                String Id=JOptionPane.showInputDialog("Ingrese el Id del alumno: ");
+                agregarAlumno(Id);
             }if(opcion==4){
-                
+                String Id=JOptionPane.showInputDialog("Ingrese el Id del alumno: ");
+                String code=JOptionPane.showInputDialog("Ingrese el código de la clase: ");
+                agregarClaseA(Id, code);
             }if(opcion ==5){
                 int exp=Integer.parseInt(
                         JOptionPane.showInputDialog("Ingrese los anos de experiencia: "));
@@ -61,11 +69,11 @@ public class Lab3P2_DiegoCasco_DavidLara {
                             + ""));
                 }
             }if(opcion==8){
-                
+                imprimirClases();
             }if(opcion==9){
                 
             }if (opcion==10){
-                
+                imprimirAlumnos();
             }if(opcion==11){
                 String salida="";
                 for(Object temp: transportistas){
@@ -79,5 +87,5 @@ public class Lab3P2_DiegoCasco_DavidLara {
             }
         }
     }
-    
+
 }

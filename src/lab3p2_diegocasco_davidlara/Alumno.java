@@ -22,4 +22,7 @@ public class Alumno {
         return "Alumno{" + "Id=" + Id + '}';
     }
 
+    public void setClase(Clase clase) {
+        clase.setAlumno(this);
+    }
 }
