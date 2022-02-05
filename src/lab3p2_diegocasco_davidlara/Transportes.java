@@ -2,17 +2,17 @@ package lab3p2_diegocasco_davidlara;
 
 import java.util.ArrayList;
 
-public class Transportes extends Alumnos{
+public class Transportes extends Alumnos {
 
     // Atributos
     private static boolean verificador = false;
     private static ArrayList<Transporte> transportes = new ArrayList<>();
 
     // Métodos
-    public static void verify(int placa){
-        if(!verificador){
+    public static void verify(int placa) {
+        if (!verificador) {
             for (int i = 0; i < transportes.size(); i++) {
-                if(transportes.get(i).getPlaca() == placa){
+                if (transportes.get(i).getPlaca() == placa) {
                     verificador = true;
                     System.out.println("La placa ya existe");
                 } else {
@@ -22,7 +22,7 @@ public class Transportes extends Alumnos{
         }
     }
 
-    public static void defectoT(){
+    public static void defectoT() {
         String tipoT = "Bus";
         int asientos = 50;
         int parados = 10;
@@ -32,9 +32,9 @@ public class Transportes extends Alumnos{
         transportes.add(t);
     }
 
-    public static void agregarT(String tipoT, int asientos, int parados, int placa, String color){
+    public static void agregarT(String tipoT, int asientos, int parados, int placa, String color) {
         verify(placa);
-        if(!verificador){
+        if (!verificador) {
             Transporte t = new Transporte(tipoT, asientos, parados, placa, color);
             transportes.add(t);
         }
@@ -52,13 +52,13 @@ public class Transportes extends Alumnos{
         }
     }
 
-    public static void mostrarT(){
+    public static void mostrarT() {
         for (int i = 0; i < transportes.size(); i++) {
             System.out.println(transportes.get(i).toString());
         }
     }
 
-    public static void imprimirA(){
+    public static void imprimirA() {
         for (int i = 0; i < transportes.size(); i++) {
             System.out.println(transportes.get(i).toString() + "\n" + alumnos.get(i).toString());
         }

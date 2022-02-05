@@ -108,18 +108,18 @@ public class Lab3P2_DiegoCasco_DavidLara {
                 do {
                     opcion2 = Integer.parseInt
                             (JOptionPane.showInputDialog("""
-                            0-Salir
-                            1-Subir Alumno
-                            2-listar Alumnos
-                            3-Escoger Transportista
-                            4-Añadir ruta
-                            5-Imprimir Transporte
-                            6-Destruir Transporte
-                            seleccione una opción:"""));
+                                    0-Salir
+                                    1-Subir Alumno
+                                    2-listar Alumnos
+                                    3-Escoger Transportista
+                                    4-Añadir ruta
+                                    5-Imprimir Transporte
+                                    6-Destruir Transporte
+                                    seleccione una opción:"""));
                     if (opcion2 == 1) {
                         String Id = JOptionPane.showInputDialog("Ingrese el Id del alumno: ");
                         String tipoT = JOptionPane.showInputDialog("Ingrese el tipo de transporte: ");
-                        agregarTransporteA(Id,tipoT);
+                        agregarTransporteA(Id, tipoT);
                     } else if (opcion2 == 2) {
                         imprimirA();
                     } else if (opcion2 == 3) {

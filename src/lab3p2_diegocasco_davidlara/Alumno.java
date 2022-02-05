@@ -39,6 +39,7 @@ public class Alumno {
     public static void setTipoT(Transporte transporte) {
         transporte.setTipoT(String.valueOf(transporte));
     }
+
     public static void getTipoT(Transporte transporte) {
         transporte.getTipoT();
     }

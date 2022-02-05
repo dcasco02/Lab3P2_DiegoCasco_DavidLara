@@ -30,7 +30,7 @@ public class Estaciones {
 
     public static void imprimirEst(String nombre) {
         for (Estacion estacion : estaciones) {
-                if (estacion.getEstacion().equals(nombre)) {
+            if (estacion.getEstacion().equals(nombre)) {
                 System.out.println(estacion.getEstacion());
             }
         }

@@ -23,10 +23,10 @@ public class Alumnos extends Clases {
     public static void defectoA() {
         String nombre = "WTF";
         String identidad = "WTF21";
-        int fechaNacimiento = 10/5/2000;
+        int fechaNacimiento = 10 / 5 / 2000;
         String Id = "W2321";
-       Alumno alumno = new Alumno(nombre, identidad, Id, fechaNacimiento);
-       alumnos.add(alumno);
+        Alumno alumno = new Alumno(nombre, identidad, Id, fechaNacimiento);
+        alumnos.add(alumno);
     }
 
     public static void agregarAlumno(String nombre, String identidad, String Id, int fechaNacimiento) {

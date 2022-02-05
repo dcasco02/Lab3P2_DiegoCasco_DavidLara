@@ -23,7 +23,6 @@ public class Transportista {
     }
 
 
-
     public String toString() {
         return "Transportista" + "\n" + "Nombre: " + nombre + "\n" + "Tiempo de experiencia: " + tiempoexp + "\n" +
                 "Apodo: " + apodo + "\n" + "Identidad: " + identidad + "\n" + "Fecha de nacimiento: " + fechaN;
