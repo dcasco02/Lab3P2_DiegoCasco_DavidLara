@@ -9,7 +9,7 @@ public class Alumno {
     private int fechaNacimiento;
 
     // Constructor
-    public Alumno(String nombre,String identidad, String Id, int fechaNacimiento) {
+    public Alumno(String nombre, String identidad, String Id, int fechaNacimiento) {
         this.Id = Id;
         this.nombre = nombre;
         this.identidad = identidad;
@@ -35,4 +35,12 @@ public class Alumno {
     public void setClase(Clase clase) {
         clase.setAlumno(this);
     }
+
+    public static void setTipoT(Transporte transporte) {
+        transporte.setTipoT(String.valueOf(transporte));
+    }
+    public static void getTipoT(Transporte transporte) {
+        transporte.getTipoT();
+    }
+
 }

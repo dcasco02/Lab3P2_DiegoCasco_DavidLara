@@ -1,55 +1,38 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab3p2_diegocasco_davidlara;
 
-/**
- *
- * @author dcasc
- */
 public class Transporte {
+    // Atributos
+    private boolean verificar = false;
     private String tipotransporte;
     private int asientos;
     private int parados;
     private int placa;
+    private String color;
 
-    public String getTipotransporte() {
+    // Constructor
+    public  Transporte(String tipotransporte, int asientos, int parados, int placa, String color) {
+        this.tipotransporte = tipotransporte;
+        this.asientos = asientos;
+        this.parados = parados;
+        this.placa = placa;
+        this.color = color;
+    }
+
+    public String getTipoT() {
         return tipotransporte;
     }
 
-    public void setTipotransporte(String tipotransporte) {
+    public void setTipoT(String tipotransporte) {
         this.tipotransporte = tipotransporte;
-    }
-
-    public int getAsientos() {
-        return asientos;
-    }
-
-    public void setAsientos(int asientos) {
-        this.asientos = asientos;
-    }
-
-    public int getParados() {
-        return parados;
-    }
-
-    public void setParados(int parados) {
-        this.parados = parados;
     }
 
     public int getPlaca() {
         return placa;
     }
 
-    public void setPlaca(int placa) {
-        this.placa = placa;
+    public String toString() {
+        return "Transporte" + "\n" + "Tipo de transporte: " + tipotransporte + "\n" + "Asientos: " + asientos +
+                "\n" + "Parados: " + parados + "\n" + "Placa: " + placa + "\n" + "Color: " + color;
     }
 
-    @Override
-    public String toString() {
-        return "Transporte{" + "tipotransporte=" + tipotransporte + ", asientos=" + asientos + ", parados=" + parados + ", placa=" + placa + '}';
-    }
-    
 }

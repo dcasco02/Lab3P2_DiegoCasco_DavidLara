@@ -7,16 +7,16 @@ public class Clase {
     private String codigo;
 
     // Constructor
-    public Clase(String nombre, String codigo){
+    public Clase(String nombre, String codigo) {
         this.nombre = nombre;
         this.codigo = codigo;
     }
 
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
 
-    public String getCodigo(){
+    public String getCodigo() {
         return codigo;
     }
 
@@ -24,10 +24,9 @@ public class Clase {
         alumno.setClase(this);
     }
 
-    public String toString(){
+    public String toString() {
         return "Clase: " + nombre + " - " + codigo;
     }
-
 
 }
 

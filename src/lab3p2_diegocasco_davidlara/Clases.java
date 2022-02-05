@@ -10,7 +10,7 @@ public class Clases {
 
     // Métodos
 
-    public static void verify(String codigo){
+    public static void verify(String codigo) {
         for (int i = 0; i < clases.size(); i++) {
             if (clases.get(i).getCodigo().equals(codigo)) {
                 verificador = true;
@@ -19,10 +19,14 @@ public class Clases {
                 verificador = false;
             }
         }
-
     }
 
-    public static void registrarC(String nombre, String codigo){
+    public static void defectC() {
+        String codigo = "123";
+        String nombre = "Programación";
+    }
+
+    public static void registrarC(String nombre, String codigo) {
         verify(codigo);
         if (!verificador) {
             Clase clase = new Clase(nombre, codigo);
@@ -32,11 +36,9 @@ public class Clases {
         }
     }
 
-    public static void imprimirClases(){
-        for(Clase clase: clases){
+    public static void imprimirClases() {
+        for (Clase clase : clases) {
             System.out.println(clase.toString());
         }
     }
-
-
 }
